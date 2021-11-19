@@ -5,4 +5,4 @@ modalLink: 'portfolioModal3'
 image: src/assets/img/bruno-nascimento-eo11MS0FSnk-unsplash.jpg
 permalink: false
 ---
-Play Therapy sessions conducted by a parent has been researched and proven to be more effective than delivered by a therapist! Our In-Home Play Therapy training empowers you, the parent, to build the relationship and create the environment needed for your child to get better.
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/reJpo-GaopM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

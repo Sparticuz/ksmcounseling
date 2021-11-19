@@ -5,4 +5,6 @@ modalLink: portfolioModal1
 image: src/assets/img/steven-libralon-Do1GQljlNk8-unsplash.jpg
 permalink: false
 ---
-The Kid Counselor Center specializes in play therapy and sand play therapy for children 3-14 years old. Children use play as their language and toys as their words. Discover how Play Therapy is the best fit to help children work through their issues.
+A child’s most natural activity is to play. With Child-Centered Play Therapy, children express their feelings, learn
+new things, grow, and heal. In the playroom, your child will build confidence, responsibility, self-control,
+self-acceptance, and coping skills.
