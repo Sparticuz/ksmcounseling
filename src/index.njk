@@ -39,7 +39,7 @@
     <div class="container">
       <div class="masthead-subheading">Welcome!</div>
       <div class="masthead-heading text-uppercase">It's Nice To Meet You</div><a
-        class="btn btn-primary btn-xl text-uppercase" href="#about">Tell Me More</a>
+        class="btn btn-primary btn-xl text-uppercase" href="#playtherapy">Tell Me More</a>
     </div>
   </header>
   <!-- About Me-->
@@ -47,9 +47,9 @@
     <div class="container">
       <div class="text-center">
         <h2 class="section-heading text-uppercase">About Me</h2>
-        <h3 class="section-subheading text-muted mx-auto text-center col-lg-8">Hi, I’m Kristyn McNally. I’m dedicated to helping your child thrive
-          through play therapy. We all face challenges in life. I’m here to help your child overcome those challenges
-          and achieve their goals.</h3>
+        <h3 class="section-subheading text-muted mx-auto text-center col-lg-8">Hi, I’m Kristyn McNally. I’m dedicated
+          to helping your child thrive through play therapy. We all face challenges in life. I’m here to help your child
+          overcome those challenges and achieve their goals.</h3>
       </div>
       <div class="row">
         <div class="col-lg-4">&nbsp;</div>
@@ -65,11 +65,6 @@
         </div>
         <div class="col-lg-4">&nbsp;</div>
       </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted"></p>
-        </div>
-      </div>
     </div>
   </section>
   <!-- Play Therapy Grid-->
@@ -80,22 +75,58 @@
         <h3 class="section-subheading text-muted">Toys are a child’s words and play is their language —Dr. Gary Landreth</h3>
       </div>
       <div class="row">
-        {%- for item in collections.playtherapy -%}
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col mb-4">
           <!-- Play Therapy Item-->
-          <div class="playtherapy-item"><a class="playtherapy-link" data-bs-toggle="modal" href="#{{ item.data.modalLink }}">
-              <div class="playtherapy-hover">
-                <div class="playtherapy-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-              </div>
-              {% image item.data.image, item.data.title, "img-fluid", "[300, 600]" %}
-            </a>
+          <div class="playtherapy-item">
+            {% image "src/assets/img/steven-libralon-Do1GQljlNk8-unsplash.jpg", "Child-Centered Play Therapy", "img-fluid", "[300, 600, 900]" %}
             <div class="playtherapy-caption">
-              <div class="playtherapy-caption-heading">{{ item.data.title }}</div>
-              <div class="playtherapy-caption-subheading text-muted">{{ item.templateContent | safe }}</div>
+              <div class="playtherapy-caption-heading">Child-Centered Play Therapy</div>
+              <div class="playtherapy-caption-subheading text-muted">A child’s most natural activity is to play. With
+                Child-Centered Play Therapy, children express their feelings, learn new things, grow, and heal. In the
+                playroom, your child will build confidence, responsibility, self-control, self-acceptance, and coping
+                skills.</div>
             </div>
           </div>
         </div>
-        {%- endfor -%}
+        <div class="col mb-4">
+          <div class="playtherapy-item">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/reJpo-GaopM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="playtherapy-caption">
+              <div class="playtherapy-caption-heading">This isn't how kids communicate</div>
+              <div class="playtherapy-caption-subheading text-muted">When a child plays, they express thoughts and
+                feelings that would otherwise remain hidden. That's why Play Therapy can be a powerful tool to address
+                a child's cognitive, behavioral, and emotional challenges.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <!-- Play Therapy Item-->
+          <div class="playtherapy-item">
+            {% image "src/assets/img/bruno-nascimento-eo11MS0FSnk-unsplash.jpg", "Child-Centered Play Therapy", "img-fluid", "[300, 600, 900]" %}
+            <div class="playtherapy-caption">
+              <div class="playtherapy-caption-heading">Toys</div>
+              <div class="playtherapy-caption-subheading text-muted">In the play room your child is free to do what
+                kids do best: play! The playroom is full of fun and intentionally selected toys to help your child heal
+                and grow. In Child-Centered Play Therapy, I do not direct your child’s play, so that your child is free
+                to make choices and explore. I build a safe and trusting relationship with your child that encourages
+                your child to process tough emotions, try new behaviors, and discover their inner strengths, all
+                through their play. As your child plays, I will verbally reflect their activity and feelings, building
+                their self-awareness and sense of self-worth. As your child internalizes my verbal cues, your
+                child will feel encouraged to face the challenges in their life.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">For more information on play therapy and Child-Centered Play Therapy, please visit
+          the following links: <ul><li><a href="https://cpt.unt.edu/what-is-play-therapy">https://cpt.unt.edu/what-is-play-therapy</a></li>
+          <li><a href="https://www.a4pt.org/page/ParentsCornerHomePag">https://www.a4pt.org/page/ParentsCornerHomePag</a></li></ul></p>
+        </div>
       </div>
     </div>
   </section>
@@ -104,69 +135,26 @@
     <div class="container">
       <div class="text-center">
         <h2 class="section-heading text-uppercase">Parent Corner</h2>
-        <h3 class="section-subheading text-muted">Frequently Asked Questions</h3>
+        <h3 class="section-subheading text-muted">&nbsp;</h3>
       </div>
       <ul class="timeline">
-        <li>
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/faq/1.jpg" alt="...">
-          </div>
+        {% for item in collections.parents %}
+          {% if loop.index % 2 === 0 %}
+            <li>
+          {% else %}
+            <li class="timeline-inverted">
+          {% endif %}
+          <div class="timeline-image">{% image item.data.image, item.data.title, "rounded-circle img-fluid", "[300, 600, 900]" %}</div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4>Initial Consultation</h4>
-              <h4 class="subheading">is Free!</h4>
+              <h4>{{ item.data.title }}</h4>
             </div>
             <div class="timeline-body">
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
-                sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!</p>
+              <p class="text-muted">{{ item.templateContent | safe }}</p>
             </div>
           </div>
         </li>
-        <li class="timeline-inverted">
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/faq/2.jpg" alt="...">
-          </div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4>Insurance</h4>
-              <h4 class="subheading">and Private Pay</h4>
-            </div>
-            <div class="timeline-body">
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
-                sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/faq/3.jpg" alt="...">
-          </div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4>Another</h4>
-              <h4 class="subheading">Question</h4>
-            </div>
-            <div class="timeline-body">
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
-                sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/faq/4.jpg" alt="...">
-          </div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4>Another</h4>
-              <h4 class="subheading">Question</h4>
-            </div>
-            <div class="timeline-body">
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius
-                sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                dolore laudantium consectetur!</p>
-            </div>
-          </div>
-        </li>
+        {%- endfor -%}
         <li class="timeline-inverted">
           <div class="timeline-image">
             <h4>Celebrate<br>Success<br>Today!</h4>
@@ -287,37 +275,6 @@
       </div>
     </div>
   </footer>
-
-  {%- for item in collections.playtherapy -%}
-    <div class="playtherapy-modal modal fade" id="{{ item.data.modalLink }}" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <h2 class="text-uppercase">{{ item.data.title }}</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  {% image item.data.image, item.data.title, "img-fluid d-block mx-auto", "[300, 600, 1000, 1400]" %}
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                    blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
-                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li><strong>Client:</strong>Threads</li>
-                    <li><strong>Category:</strong>Illustration</li>
-                  </ul>
-                  <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><i
-                      class="fas fa-times me-1"></i>Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  {%- endfor -%}
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,10 @@
+---
+tags: parents
+title: Cost
+image: src/assets/img/faq/1.jpg
+date: 2021-01-05
+permalink: false
+---
+We will discuss fees during our Free initial Parent Consultation. All fees are Self Pay and due at time of service.
+However, you may qualify for out-of-network reimbursement through your insurance afterwards. Call your insurance to
+confirm, and I can provide you with the paperwork needed to submit this request.

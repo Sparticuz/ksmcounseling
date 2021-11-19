@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Add Shortcode for Images
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   return {
     dir: {
