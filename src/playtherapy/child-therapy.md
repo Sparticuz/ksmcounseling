@@ -1,6 +1,6 @@
 ---
 tags: playtherapy
-title: Child Therapy
+title: Child-Centered Play Therapy
 modalLink: portfolioModal1
 image: src/assets/img/steven-libralon-Do1GQljlNk8-unsplash.jpg
 permalink: false

@@ -59,9 +59,14 @@
       transition: font-size 0.3s ease-in-out;
 
       img {
-        height: 2rem;
+        height: 6rem;
         transition: height 0.3s ease-in-out;
       }
+
+      .shdow {
+        opacity: 0.45;
+      }
+
     }
 
     // Styling for when the navbar shrinks on larger screens
@@ -77,7 +82,11 @@
 
         svg,
         img {
-          height: 1.5rem;
+          height: 4.5rem;
+        }
+
+        .shdow {
+          opacity: 0.25;
         }
       }
     }
