@@ -142,7 +142,7 @@
           {% else %}
             <li class="timeline-inverted">
           {% endif %}
-          <div class="timeline-image">{% image item.data.image, item.data.title, "rounded-circle img-fluid", "[300, 600, 900]" %}</div>
+          <div class="timeline-image border border-5">{% image item.data.image, item.data.title, "rounded-circle img-fluid", "[300, 600, 900]" %}</div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>{{ item.data.title }}</h4>
@@ -154,7 +154,7 @@
         </li>
         {%- endfor -%}
         <li class="timeline-inverted">
-          <div class="timeline-image">
+          <div class="timeline-image border border-5">
             <h4>Celebrate<br>Success<br>Today!</h4>
           </div>
         </li>
