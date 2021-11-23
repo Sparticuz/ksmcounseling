@@ -2,6 +2,7 @@
 tags: playtherapy
 title: The Play Room
 image: src/assets/img/michal-bozek-RcxR1aLw8X0-unsplash.jpg
+date: 2021-01-03
 permalink: false
 ---
 In the play room your child is free to do what kids do best: play! The playroom is full of fun and intentionally
