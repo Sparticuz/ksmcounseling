@@ -76,51 +76,24 @@
         <h3 class="section-subheading text-muted">Toys are a child’s words and play is their language —Dr. Gary Landreth</h3>
       </div>
       <div class="row">
+        {% for item in collections.playtherapy %}
         <div class="col mb-4">
           <!-- Play Therapy Item-->
           <div class="playtherapy-item">
-            {% image "src/assets/img/steven-libralon-Do1GQljlNk8-unsplash.jpg", "Child-Centered Play Therapy", "img-fluid", "[300, 600, 900]" %}
-            <div class="playtherapy-caption">
-              <div class="playtherapy-caption-heading">Child-Centered Play Therapy</div>
-              <div class="playtherapy-caption-subheading text-muted">A child’s most natural activity is to play. With
-                Child-Centered Play Therapy, children express their feelings, learn new things, grow, and heal. In the
-                playroom, your child will build confidence, responsibility, self-control, self-acceptance, and coping
-                skills.</div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="playtherapy-item">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.youtube-nocookie.com/embed/reJpo-GaopM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="playtherapy-caption">
-              <div class="playtherapy-caption-heading">This isn't how kids communicate</div>
-              <div class="playtherapy-caption-subheading text-muted">When a child plays, they express thoughts and
-                feelings that would otherwise remain hidden. That's why Play Therapy can be a powerful tool to address
-                a child's cognitive, behavioral, and emotional challenges.
+            {% if item.data.video %}
+              <div class="ratio ratio-16x9">
+                {{ item.templateContent | safe }}
               </div>
-            </div>
+            {% else %}
+              {% image item.data.image, item.data.title, "img-fluid", "[300, 600, 900]" %}
+              <div class="playtherapy-caption">
+                <div class="playtherapy-caption-heading">{{ item.data.title }}</div>
+                <div class="playtherapy-caption-subheading text-muted">{{ item.templateContent | safe }}</div>
+              </div>
+            {% endif %}
           </div>
         </div>
-        <div class="col mb-4">
-          <!-- Play Therapy Item-->
-          <div class="playtherapy-item">
-            {% image "src/assets/img/bruno-nascimento-eo11MS0FSnk-unsplash.jpg", "Child-Centered Play Therapy", "img-fluid", "[300, 600, 900]" %}
-            <div class="playtherapy-caption">
-              <div class="playtherapy-caption-heading">Toys</div>
-              <div class="playtherapy-caption-subheading text-muted">In the play room your child is free to do what
-                kids do best: play! The playroom is full of fun and intentionally selected toys to help your child heal
-                and grow. In Child-Centered Play Therapy, I do not direct your child’s play, so that your child is free
-                to make choices and explore. I build a safe and trusting relationship with your child that encourages
-                your child to process tough emotions, try new behaviors, and discover their inner strengths, all
-                through their play. As your child plays, I will verbally reflect their activity and feelings, building
-                their self-awareness and sense of self-worth. As your child internalizes my verbal cues, your
-                child will feel encouraged to face the challenges in their life.</div>
-            </div>
-          </div>
-        </div>
-
+        {%- endfor -%}
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
