@@ -27,6 +27,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // Watch the CSS Output
   eleventyConfig.setBrowserSyncConfig({
     files: "./dist/css/**/*.css",
   })
