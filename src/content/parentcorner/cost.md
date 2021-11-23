@@ -1,7 +1,7 @@
 ---
 tags: parents
 title: Cost
-image: src/assets/img/faq/1.jpg
+image: src/assets/img/kelly-sikkema-FqqaJI9OxMI-unsplash.jpg
 date: 2021-01-05
 permalink: false
 ---

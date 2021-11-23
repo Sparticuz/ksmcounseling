@@ -1,7 +1,7 @@
 ---
 tags: parents
 title: Parents as Partners
-image: src/assets/img/faq/4.jpg
+image: src/assets/img/humphrey-muleba-jrOPyEXA8DE-unsplash.jpg
 date: 2021-01-01
 permalink: false
 ---

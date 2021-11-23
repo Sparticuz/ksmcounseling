@@ -1,7 +1,7 @@
 ---
 tags: parents
 title: Our Ongoing Partnership
-image: src/assets/img/faq/3.jpg
+image: src/assets/img/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg
 date: 2021-01-04
 permalink: false
 ---

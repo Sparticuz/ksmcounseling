@@ -1,7 +1,7 @@
 ---
 tags: parents
 title: Getting Started
-image: src/assets/img/faq/2.jpg
+image: src/assets/img/sophia-baboolal-OBA5HarJh6E-unsplash.jpg
 date: 2021-01-02
 permalink: false
 ---

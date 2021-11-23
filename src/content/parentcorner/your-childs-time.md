@@ -1,7 +1,7 @@
 ---
 tags: parents
 title: Your Child’s Time
-image: src/assets/img/faq/1.jpg
+image: src/assets/img/markus-spiske-OO89_95aUC0-unsplash.jpg
 date: 2021-01-03
 permalink: false
 ---

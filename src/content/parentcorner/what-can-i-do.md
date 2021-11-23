@@ -1,7 +1,7 @@
 ---
 tags: parents
-title: What can I be doing at Home
-image: src/assets/img/faq/3.jpg
+title: Success Starts at Home
+image: src/assets/img/bruno-nascimento-eo11MS0FSnk-unsplash.jpg
 date: 2021-01-06
 permalink: false
 ---
