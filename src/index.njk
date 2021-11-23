@@ -27,7 +27,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ms-1"></i></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+        <ul class="navbar-nav text-uppercase text-center ms-auto py-4 py-lg-0">
           <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="#playtherapy">Play Therapy</a></li>
           <li class="nav-item"><a class="nav-link" href="#parents">Parent Corner</a></li>
@@ -49,9 +49,9 @@
   <section class="page-section bg-light" id="about">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-md">
           <div class="team-member">
-            {% image "./src/assets/img/team/McNally-Resized.jpg", "Kristyn", "mx-auto border border-5", "[375]" %}
+            {% image "./src/assets/img/team/McNally-Resized.jpg", "Kristyn", "border border-5 ratio ratio-1x1 w-auto", "[375]" %}
             <h4>Kristyn McNally</h4>
             <p class="text-muted">LMHC</p>
             <!-- <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -59,11 +59,13 @@
             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
           </div>
         </div>
-        <div class="col text-center">
-          <h2 class="section-heading text-uppercase">About Me</h2>
-          <h3 class="section-subheading text-muted mx-auto text-center col-lg-8 mt-5">Hi, I’m Kristyn McNally. I’m dedicated
+        <div class="col-md text-center d-flex align-items-center">
+          <div>
+            <h2 class="section-heading text-uppercase">About Me</h2>
+            <h3 class="section-subheading text-muted">Hi, I’m Kristyn McNally. I’m dedicated
             to helping your child thrive through play therapy. We all face challenges in life. I’m here to help your child
             overcome those challenges and achieve their goals.</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -77,7 +79,7 @@
       </div>
       <div class="row">
         {% for item in collections.playtherapy %}
-        <div class="col mb-4">
+        <div class="col-lg mb-4">
           <!-- Play Therapy Item-->
           <div class="playtherapy-item">
             {% if item.data.video %}
@@ -96,7 +98,7 @@
         {%- endfor -%}
       </div>
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
+        <div class="col mx-auto text-center">
           <p class="large text-muted">For more information on play therapy and Child-Centered Play Therapy, please visit
           the following links</p>
         </div>
@@ -110,7 +112,7 @@
         {% for item in collections.links %}
           <div class="col my-3">
             <a href="{{ item.data.link }}">
-              {% image item.data.image, item.templateContent | safe, "img-fluid img-brand d-block mx-auto", "[300, 600, 900]" %}
+              {% image item.data.image, item.templateContent | safe, "img-fluid img-brand d-block mx-auto h-auto links", "[300, 600, 900]" %}
               <br/>
               {{ item.templateContent | safe }}</a>
           </div>
@@ -155,7 +157,7 @@
       </div>
       <div class="row text-center">
         {%- for item in collections.kids -%}
-          <div class="col-md">
+          <div class="col-sm">
             <a>
               {% image item.data.image, item.data.title, "img-fluid", "[300, 600, 900]" %}
               <h4 class="my-3">{{ item.data.title}}</h4>
