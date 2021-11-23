@@ -4,8 +4,9 @@ async function imageShortcode(src, alt, cls, sizes) {
   sizes = JSON.parse(sizes);
   let metadata = await Image(src, {
     widths: sizes,
-    formats: ["avif", "jpeg"],
+    formats: ["avif", "jpeg", "svg"],
     outputDir: "./dist/assets/img",
+    svgShortCircuit: true,
     urlPath: "/assets/img/"
   });
 
