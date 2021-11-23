@@ -23,11 +23,13 @@ async function imageShortcode(src, alt, cls, sizes) {
 }
 
 module.exports = function(eleventyConfig) {
-  // Copy `css` to `_site/css`
   // Keeps the same directory structure.
-  eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  eleventyConfig.setBrowserSyncConfig({
+    files: "./dist/css/**/*.css",
+  })
 
   // Add Shortcode for Images
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
