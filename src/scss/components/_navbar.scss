@@ -102,3 +102,13 @@
     }
   }
 }
+
+@include media-breakpoint-down(md) {
+  .fixed-top {
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    left: inherit;
+    z-index: inherit;
+  }
+}
