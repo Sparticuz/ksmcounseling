@@ -1,6 +1,6 @@
 ---
 tags: kids
-title: Beagle
+title: Beagle Coloring Page
 permalink: false
 image: src/assets/img/coloring/beagle.jpg
 link: assets/img/coloring/beagle.jpg

@@ -1,6 +1,6 @@
 ---
 tags: kids
-title: Firetruck
+title: Firetruck Coloring Page
 permalink: false
 image: src/assets/img/coloring/firetruck.jpg
 link: assets/img/coloring/firetruck.jpg

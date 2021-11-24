@@ -1,6 +1,6 @@
 ---
 tags: kids
-title: Chameleon
+title: Chameleon Coloring Page
 permalink: false
 image: src/assets/img/coloring/chameleon.jpg
 link: assets/img/coloring/chameleon.jpg
