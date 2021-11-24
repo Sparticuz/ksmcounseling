@@ -1,5 +1,4 @@
 node_modules
 .DS_Store
 dist
-src/css/styles.css
-src/css/styles.css.map
+.serverless
