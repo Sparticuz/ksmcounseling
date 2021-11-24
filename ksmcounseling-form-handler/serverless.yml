@@ -1,0 +1,32 @@
+service: ksmcounseling-form-handler
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: nodejs14.x
+  profile: kyle
+  lambdaHashingVersion: 20201221
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ses:SendRawEmail
+          Resource: "*"
+  httpApi:
+    cors: true
+
+# you can add packaging information here
+#package:
+#  patterns:
+#    - '!exclude-me.js'
+#    - '!exclude-me-dir/**'
+#    - include-me.js
+#    - include-me-dir/**
+
+functions:
+  form:
+    handler: handler.form
+    events:
+      - httpApi:
+          path: /form
+          method: POST
