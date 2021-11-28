@@ -5,9 +5,9 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run build:sass && eleventy",
-    "clean": "rm -rf dist/**",
+    "clean": "rm -rf _site/**",
     "start": "npm run watch:eleventy & npm run watch:sass",
-    "build:sass": "sass --style=compressed src/scss/styles.scss:dist/css/styles.css",
+    "build:sass": "sass --style=compressed src/scss/styles.scss:_site/css/styles.css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run build:sass -- --watch"
   },

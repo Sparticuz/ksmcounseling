@@ -5,7 +5,7 @@ async function imageShortcode(src, alt, cls, sizes) {
   let metadata = await Image(src, {
     widths: sizes,
     formats: ["avif", "jpeg", "svg"],
-    outputDir: "./dist/assets/img",
+    outputDir: "./_site/assets/img",
     svgShortCircuit: true,
     urlPath: "/assets/img/"
   });
@@ -22,14 +22,14 @@ async function imageShortcode(src, alt, cls, sizes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Keeps the same directory structure.
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Watch the CSS Output
   eleventyConfig.setBrowserSyncConfig({
-    files: "./dist/css/**/*.css",
+    files: "./_site/css/**/*.css",
   })
 
   // Add Shortcode for Images
@@ -38,7 +38,6 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "dist"
     }
   }
 };
