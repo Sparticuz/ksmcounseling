@@ -2,7 +2,6 @@
 
 const { SES, SendRawEmailCommand } = require("@aws-sdk/client-ses");
 const nodemailer = require("nodemailer");
-const querystring = require("node:querystring");
 
 const transporter = nodemailer.createTransport({
   SES: {
@@ -26,10 +25,10 @@ const getBody = (body, isBase64Encoded) => {
 
 const mergeMail = (event) => {
   return {
-    from: "kristyn@fireflyplaytherapy.com",
+    from: process.env.email,
     subject: "Website Inquiry",
     text: `A message has been submitted: \nFrom: ${event.name} <${event.email}>\nPhone: ${event.phone}\nMessage: ${event.message}`,
-    to: "kristyn@fireflyplaytherapy.com",
+    to: process.env.email,
   };
 };
 

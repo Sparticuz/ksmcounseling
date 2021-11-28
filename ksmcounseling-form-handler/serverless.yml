@@ -26,6 +26,8 @@ provider:
 functions:
   form:
     handler: handler.form
+    env:
+      email: "kristyn@fireflyplaytherapy.com"
     events:
       - httpApi:
           path: /form
