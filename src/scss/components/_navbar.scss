@@ -28,6 +28,10 @@
       height: 6rem;
       width: auto;
     }
+
+    &.navbar-shrink {
+      padding: 0 !important;
+    }
   }
 
   .navbar-nav {

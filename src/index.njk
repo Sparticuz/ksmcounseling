@@ -83,15 +83,15 @@
           <div class="playtherapy-item">
             {% if item.data.video %}
               <div class="ratio ratio-16x9">
-                {{ item.templateContent | safe }}
+                {{ item.data.video | safe }}
               </div>
             {% else %}
               {% image item.data.image, item.data.title, "img-fluid", "[300, 600, 900]" %}
-              <div class="playtherapy-caption">
-                <div class="playtherapy-caption-heading">{{ item.data.title }}</div>
-                <div class="playtherapy-caption-subheading text-muted">{{ item.templateContent | safe }}</div>
-              </div>
             {% endif %}
+            <div class="playtherapy-caption">
+              <div class="playtherapy-caption-heading">{{ item.data.title }}</div>
+              <div class="playtherapy-caption-subheading text-muted">{{ item.templateContent | safe }}</div>
+            </div>
           </div>
         </div>
         {%- endfor -%}
@@ -253,6 +253,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+  <nav class="navbar-shrink"></nav>
 </body>
 
 </html>
