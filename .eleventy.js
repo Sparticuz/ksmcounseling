@@ -1,6 +1,7 @@
 const Image = require("@11ty/eleventy-img");
+// const purgeCssPlugin = require("eleventy-plugin-purgecss");
 
-async function imageShortcode(src, alt, cls, sizes) {
+const imageShortcode = async (src, alt, cls, sizes) => {
   sizes = JSON.parse(sizes);
   let metadata = await Image(src, {
     widths: sizes,
@@ -26,6 +27,8 @@ module.exports = function (eleventyConfig) {
   // Keeps the same directory structure.
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  // eleventyConfig.addPlugin(purgeCssPlugin, {});
 
   // Watch the CSS Output
   eleventyConfig.setBrowserSyncConfig({
