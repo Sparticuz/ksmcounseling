@@ -21,7 +21,7 @@ jobs:
         run: |
           npm ci
           npm run build:sass
-          eleventy
+          npx eleventy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
