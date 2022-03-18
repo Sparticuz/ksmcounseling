@@ -65,6 +65,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
       .then((response) => {
         if (response.status === 204) {
+          // Hide the error div if needed
+          const errorDiv = document.querySelector("#submitErrorMessage");
+          if (!errorDiv.classList.contains("d-none")) {
+            errorDiv.classList.add("d-none");
+          }
           const responseDiv = document.querySelector("#submitSuccessMessage");
           responseDiv.classList.remove("d-none");
           return;
