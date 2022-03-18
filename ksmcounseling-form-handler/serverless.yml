@@ -1,5 +1,4 @@
 service: ksmcounseling-form-handler
-frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs14.x
@@ -10,7 +9,7 @@ provider:
       statements:
         - Effect: Allow
           Action:
-            - ses:SendRawEmail
+            - ses:SendEmail
           Resource: "*"
   httpApi:
     cors: true
@@ -25,9 +24,9 @@ provider:
 
 functions:
   form:
-    handler: handler.form
-    env:
-      email: "kristyn@fireflyplaytherapy.com"
+    handler: handler.handler
+    environment:
+      EMAIL: "kristyn@fireflyplaytherapy.com"
     events:
       - httpApi:
           path: /form

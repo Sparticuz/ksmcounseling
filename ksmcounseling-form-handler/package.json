@@ -1,18 +1,19 @@
 {
   "name": "ksmcounseling-form-handler",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Form Handler for KSMCounseling",
+  "type": "module",
   "main": "handler.js",
   "scripts": {
-    "deploy": "serverless deploy --stage prod --verbose"
+    "deploy": "serverless deploy --stage prod --aws-profile kyle",
+    "test": "EMAIL='kyle@kmcnally.net' node tests/test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-ses": "^3.43.0",
-    "nodemailer": "^6.7.2"
+    "@aws-sdk/client-sesv2": "^3.54.1"
   },
   "devDependencies": {
-    "serverless": "^2.69.1"
+    "serverless": "^3.7.8"
   }
 }
