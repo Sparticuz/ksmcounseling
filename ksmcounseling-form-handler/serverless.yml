@@ -1,9 +1,8 @@
 service: ksmcounseling-form-handler
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   profile: kyle
-  lambdaHashingVersion: 20201221
   iam:
     role:
       statements:
