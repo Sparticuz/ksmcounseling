@@ -6,7 +6,7 @@
   "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy --stage prod --aws-profile kyle",
-    "test": "EMAIL='kyle@kmcnally.net' node tests/test.js"
+    "test": "AWS_REGION='us-east-1' EMAIL='kyle@kmcnally.net' node tests/test.js"
   },
   "author": "",
   "license": "ISC",
