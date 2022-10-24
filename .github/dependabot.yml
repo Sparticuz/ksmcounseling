@@ -6,6 +6,12 @@ updates:
       interval: "monthly"
     allow:
       - dependency-type: direct
+  - package-ecosystem: "npm"
+    directory: ksmcounseling-form-handler
+    schedule:
+      interval: "monthly"
+    allow:
+      - dependency-type: direct
   - package-ecosystem: "github-actions"
     directory: /
     schedule:
