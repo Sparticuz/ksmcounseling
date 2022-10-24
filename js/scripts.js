@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   document.addEventListener("scroll", navbarShrink);
 
   // Activate Bootstrap scrollspy on the main nav element
-  const mainNav = document.body.querySelector("#mainNav");
+  const mainNav = document.querySelector("#mainNav");
   if (mainNav) {
     new bootstrap.ScrollSpy(document.body, {
       offset: 74,
