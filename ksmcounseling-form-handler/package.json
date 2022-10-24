@@ -14,6 +14,6 @@
     "@aws-sdk/client-sesv2": "^3.137.0"
   },
   "devDependencies": {
-    "serverless": "^3.21.0"
+    "serverless": "^3.23.0"
   }
 }
