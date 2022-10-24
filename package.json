@@ -26,11 +26,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-img": "^2.0.1",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.2.2",
+    "eleventy-plugin-purgecss": "^0.3.0",
     "prettier": "^2.7.1",
     "sass": "^1.55.0"
-  },
-  "dependencies": {
-    "eleventy-plugin-purgecss": "^0.2.1"
   }
 }
