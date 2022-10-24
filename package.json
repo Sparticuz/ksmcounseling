@@ -28,7 +28,7 @@
     "@11ty/eleventy-img": "^2.0.1",
     "bootstrap": "^5.2.0",
     "prettier": "^2.7.1",
-    "sass": "^1.54.0"
+    "sass": "^1.55.0"
   },
   "dependencies": {
     "eleventy-plugin-purgecss": "^0.2.1"
