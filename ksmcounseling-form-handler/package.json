@@ -1,6 +1,6 @@
 {
   "name": "ksmcounseling-form-handler",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Form Handler for KSMCounseling",
   "type": "module",
   "main": "handler.js",
@@ -11,9 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-sesv2": "^3.194.0"
+    "@aws-sdk/client-sesv2": "^3.224.0"
   },
   "devDependencies": {
-    "serverless": "^3.23.0"
+    "serverless": "^3.25.1"
   }
 }
