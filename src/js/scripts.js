@@ -11,7 +11,7 @@ const navbarShrink = () => {
   if (!navbarCollapsible) {
     return;
   }
-  if (window.scrollY === 0) {
+  if (window.scrollY <= 585) {
     navbarCollapsible.classList.remove("navbar-shrink");
   } else {
     navbarCollapsible.classList.add("navbar-shrink");
