@@ -31,8 +31,8 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPlugin(purgeCssPlugin, {});
 
   // Watch the CSS Output
-  eleventyConfig.setBrowserSyncConfig({
-    files: "./_site/css/**/*.css",
+  eleventyConfig.setServerOptions({
+    watch: ["./_site/css/**/*.css"],
   })
 
   // Add Shortcode for Images

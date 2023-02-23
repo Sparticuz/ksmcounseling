@@ -13,8 +13,6 @@
     font-family: $headings-font-family;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
-
-    color: #f2f2f2;
   }
 
   .navbar-brand {
@@ -42,7 +40,10 @@
         color: $white;
         letter-spacing: $headings-letter-spacing;
 
-        &.active,
+        &.active {
+          color: #f2f2f2;
+        }
+
         &:hover {
           color: $gray-900;
         }
