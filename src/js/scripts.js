@@ -21,7 +21,7 @@ const navbarShrink = () => {
 /**
  * Add DomContentLoaded event to handle the scrollbar and form
  */
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   // Shrink the navbar
   navbarShrink();
 
@@ -39,49 +39,61 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Collapse responsive navbar when toggler is visible
   const navbarToggler = document.body.querySelector(".navbar-toggler");
+  // Convert NodeListOf into an array
   const responsiveNavItems = Array.prototype.slice.call(
-    document.querySelectorAll("#navbarResponsive .nav-link")
+    document.querySelectorAll("#navbarResponsive .nav-link"),
   );
-  responsiveNavItems.map((responsiveNavItem) => {
+  for (const responsiveNavItem of responsiveNavItems) {
     responsiveNavItem.addEventListener("click", () => {
-      if (window.getComputedStyle(navbarToggler).display !== "none") {
+      if (
+        navbarToggler &&
+        window.getComputedStyle(navbarToggler).display !== "none"
+      ) {
         navbarToggler.click();
       }
     });
-  });
+  }
 
   // Now work on the form
   const form = document.querySelector("#contactForm");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      body: JSON.stringify(Object.fromEntries(formData)),
-      cache: "no-cache",
-      method: form.method,
-      mode: "cors",
-    })
-      .then((response) => {
-        if (response.status === 204) {
-          // Hide the error div if needed
-          const errorDiv = document.querySelector("#submitErrorMessage");
-          if (!errorDiv.classList.contains("d-none")) {
-            errorDiv.classList.add("d-none");
-          }
-          const responseDiv = document.querySelector("#submitSuccessMessage");
-          responseDiv.classList.remove("d-none");
-          return;
-        }
-        const responseDiv = document.querySelector("#submitErrorMessage");
-        responseDiv.classList.remove("d-none");
-        return;
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        body: JSON.stringify(Object.fromEntries(formData)),
+        cache: "no-cache",
+        method: form.method,
+        mode: "cors",
       })
-      .catch((error) => {
-        const responseDiv = document.querySelector("#submitErrorMessage");
-        responseDiv.classList.remove("d-none");
-        return;
-      });
-  });
+        .then((response) => {
+          if (response.status === 204) {
+            // Hide the error div if needed
+            const errorDiv = document.querySelector("#submitErrorMessage");
+            if (errorDiv) {
+              if (!errorDiv.classList.contains("d-none")) {
+                errorDiv.classList.add("d-none");
+              }
+              const responseDiv = document.querySelector(
+                "#submitSuccessMessage",
+              );
+              if (responseDiv) {
+                responseDiv.classList.remove("d-none");
+              }
+            }
+            return;
+          }
+          const responseDiv = document.querySelector("#submitErrorMessage");
+          if (responseDiv) {
+            responseDiv.classList.remove("d-none");
+          }
+        })
+        .catch(() => {
+          const responseDiv = document.querySelector("#submitErrorMessage");
+          if (responseDiv) {
+            responseDiv.classList.remove("d-none");
+          }
+        });
+    });
+  }
 });
