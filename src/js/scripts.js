@@ -59,6 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+
+      const submitButton = document.querySelector("#submitButton");
+      if (submitButton) {
+        submitButton.setAttribute("disabled", "disabled");
+      }
+
       const formData = new FormData(form);
       fetch(form.action, {
         body: JSON.stringify(Object.fromEntries(formData)),

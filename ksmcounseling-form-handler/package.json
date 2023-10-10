@@ -1,6 +1,6 @@
 {
   "name": "ksmcounseling-form-handler",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Form Handler for KSMCounseling",
   "type": "module",
   "main": "handler.js",
