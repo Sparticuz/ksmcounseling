@@ -41,7 +41,6 @@
           <li class="nav-item"><a class="nav-link" href="#about" aria-label="About Me">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="#playtherapy" aria-label="Play Therapy">Play Therapy</a></li>
           <li class="nav-item"><a class="nav-link" href="#parents" aria-label="Parent Corner">Parent Corner</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kids" aria-label="Kid Corner">Kid Corner</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Contact Me">Contact</a></li>
         </ul>
       </div>
@@ -159,32 +158,6 @@
         </li>
         {%- endfor -%}
       </ul>
-    </div>
-  </section>
-  <!-- Kids-->
-  <section class="page-section" id="kids">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-heading text-uppercase">Kids Corner</h2>
-        <h3 class="section-subheading text-muted">Hi! I’m Miss Kristyn. I am excited to meet you. Here is a fun video
-          just for you to tell you about what Play Therapy is.</h3>
-          <div class="ratio ratio-4x3 mw-25">
-            <iframe src="https://www.youtube-nocookie.com/embed/fmKxvTtSWoc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-      </div>
-      <div class="text-center">
-        <h3 class="section-subheading text-muted">Until we meet, here are a few fun things just for you!</h3>
-      </div>
-      <div class="row text-center">
-        {%- for item in collections.kids -%}
-          <div class="col-sm">
-            <a href="{{ item.data.link }}" target="_blank" aria-label="{{ item.data.title }}">
-              {% image item.data.image, item.data.title, "img-fluid", "[300, 600, 900]" %}
-              <h4 class="my-3">{{ item.data.title}}</h4>
-            </a>
-          </div>
-        {%- endfor -%}
-      </div>
     </div>
   </section>
   <!-- Contact-->
